@@ -6,26 +6,28 @@
 
 
 body{
-    background-color:#2d3a15;
-    margin:0;
+    background-color:#110503;
+    margin:0 0 25px 0;
     font-family: 'Baskervville', serif;
     color:white;
 }
 
 
 
+/*container for all content*/
 main{
-    max-width:70%;
+    max-width:55%;
     margin:auto;
 }
 
 
 
-h2, h3, h4, h5, h6 {
+h3{
     font-family: 'Raleway', sans-serif;
 }
 h2{
-    font-size:clamp(1rem, 1.6vw, 3rem);
+    font-family:verdana, sans-serif;
+    font-size:clamp(1rem, 1vw, 3rem);
 }
 
 
@@ -35,9 +37,7 @@ h2{
     height:60vh; 
     object-fit: cover;
 }
-.icons img{
-    width:clamp(1.2rem, 6%, 3rem);
-}
+
 
 
 /* testing layouts */
@@ -65,63 +65,76 @@ h2{
     grid-area: icons;
 } */
 
+
+
 header{
     background-image:linear-gradient(#597525, #EFF0EA, #A5331D);
     color:black;
     display:grid;
-    grid-template: auto auto auto;
+    grid-template: repeat(4, auto)/ repeat(3,auto);
+    padding:10px 10px 0 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .title{
     display:inline-block;
     text-transform: uppercase;
     text-align: center;
     transform: scale(1, 1.5) ;
-    letter-spacing: -2px;
-    line-height: 60px;
+    line-height: 30px;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end:3;
+    grid-row-end:2;
     justify-self: center;
-    font-family: 'Anton', sans-serif;
-    font-size:clamp(2rem, 4vw, 5rem);
-    margin-top:10px;
+    font-family: verdana, sans-serif;
+    font-size:clamp(2rem, 3vw, 5rem);
+    margin-top:20px;
 }
 .sub{
     text-align: center;
     grid-column-start: 1;
-    grid-column-end: 4;
-    justify-self: center;
-    align-self: start;
-    margin-top:-35px;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:3;
 }
 .by{
     justify-self: start;
     align-self: start;
-    margin-top:-3px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end:4;
 }
 .date{
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end:5;
     justify-self: start;
     align-self: start;
-    margin-top:-25px;
-    color:rgb(63, 63, 63);
+    margin-top:-15px;
+    color:rgb(48, 47, 47);
 }
 .icons{
-    width:45vw;
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 4;
-    grid-row-end: 4;
-    justify-self: center;
-    margin-top:0px;
+    grid-row-end: 5;
+    justify-self: end;
+    align-self: start;
+    margin-top:-35px;
+    margin-right:-50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .icons img{
-    margin-left:13%;
+    width:clamp(1.2rem, 30%, 3rem);
 }
 .by a{
     color:black;
+    margin-left:3px;
 }
 .by a:hover{
     background-color: rgb(63, 63, 63);
@@ -132,12 +145,21 @@ header{
 
 .about{
     display:grid;
-    grid-template: auto auto auto auto auto auto auto/ auto auto auto;
+    grid-template: repeat(7, auto)/ repeat(3, auto);
     gap:10px;
+}
+.about p{
+    font-size:clamp(15px, 1.2vw, 25px);
 }
 .first-p{
     grid-row-start:1;
     grid-row-end: 8;
+}
+.first-p::first-letter{
+    color:#597525;
+    font-size:3.8em;
+    margin: -8px 0.1em -10px 0;
+    float:left;
 }
 .second-p{
     grid-row-start:1;
@@ -148,25 +170,25 @@ header{
     grid-row-end: 3;
     height:3px;
     width:100%;
-    background-color: #ccc;
+    background-color: #597525;
     border:none;
 }
-.quote{
+.first-quote{
     grid-row-start:3;
     grid-row-end: 6; 
-    font-size:clamp(1em, 2vw, 5em);
+    font-size:clamp(1em, 1.8vw, 5em);
     text-align: center;
     align-self: center;
-    margin:auto;
-    margin-top:-18px;
-    margin-bottom:-18px;
+    margin: auto;
+    font-family: georgia, sans-serif;
+    font-style: italic;
 }
 .second-hr{
     grid-row-start:6;
     grid-row-end: 7;
     height:3px;
     width:100%;
-    background-color: #ccc;
+    background-color: #597525;
     border:none;
 }
 .third-p{
@@ -182,52 +204,386 @@ header{
 
 .history{
     display:grid;
-    grid-template: repeat(14, auto) / repeat(5, auto);
-    background-color: #333;
-    border: 1px solid red;
-    padding: 15px;
-    gap:5px;
+    grid-template: repeat(6, auto) / repeat(5, auto);
+    gap:10px;
+}
+.paragraphs-history{
+    grid-row-start:1;
+    grid-row-end:7;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .history h3{
-    background: #ccc;
-    padding:20px;
-    border: 1px solid blue;  
-    grid-column-start: 1;
+    height:25px;
+    color:#eb4626;
+    margin-top:0;
 }
 .history p{
-    background: #ccc;
-    padding:20px;
-    border: 1px solid blue;
-    grid-column-start: 1;
+    margin-top:-20px;
+    font-size:clamp(15px, 1.2vw, 25px)
 }
 .history img{
     object-fit: cover;
 }
 .civil-war{
     width:100%;
+    height:600px;
     grid-row-start: 1;
-    grid-row-end:4;
+    grid-row-end:2;
     grid-column-start: 2;
     grid-column-end: 6;
+    justify-self: center;
+    align-self: center;
 }
 .treatyrome{
     width:100%;
-    grid-row-start: 4;
-    grid-row-end:7;
+    height:100%;
+    grid-row-start: 2;
+    grid-row-end:5;
     grid-column-start: 2;
     grid-column-end: 5;
+    justify-self: center;
+    align-self: center;
 }
-.history .quote{
-    grid-row-start: 4;
-    grid-row-end:7;
+.third-hr{
+    grid-row-start:2;
+    grid-row-end: 3;
     grid-column-start: 5;
     grid-column-end: 6;
-    width:80%;
+    height:3px;
+    width:98%;
+    background-color: #597525;
+    border:none;
+    justify-self: center;
+    align-self: center;
+}
+.second-quote{
+    grid-row-start: 3;
+    grid-row-end:4;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    width:75%;
+    font-size:clamp(1em, 2vw, 4em);
+    justify-self: center;
+    align-self: center;
+    font-family: georgia, sans-serif;
+    font-style: italic;
+}
+.fourth-hr{
+    grid-row-start:4;
+    grid-row-end: 5;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    height:3px;
+    width:98%;
+    background-color: #597525;
+    border:none;
+    justify-self: center;
+    align-self: center;
 }
 .map{
     width:100%;
-    grid-row-start: 7;
-    grid-row-end:15;
+    grid-row-start: 5;
+    grid-row-end:7;
     grid-column-start: 2;
     grid-column-end: 6; 
+    justify-self: center;
+    align-self: center;
+}
+
+
+
+/*mobile devices*/
+@media all and (max-width:768px){
+    body{
+        overflow-x:hidden;
+    }
+    body::-webkit-scrollbar{/*mobile devices doesn't need a scrollbar*/
+        display:none;
+    }
+    main{
+        max-width:95%;
+    }
+
+
+
+    h2{
+        font-size:clamp(0.8rem, 0.9vw, 1.5rem);
+    }
+    .big-image{
+        height:20vh;
+    }
+    .by{
+        font-size:clamp(0.8rem, 0.9vw, 1.5rem);
+    }
+    .date{
+        font-size:clamp(0.8rem, 0.9vw, 1.5rem);
+        margin-top:-10px;
+    }
+    .icons{
+        margin-top: -25px;
+        margin-right:-25px;
+    }
+
+
+
+    .about{
+        grid-template:repeat(7,auto) / auto;
+    }
+    .about p{
+        font-size:clamp(15px, 3.5vw, 20px);
+    }
+    .first-p{
+        grid-row-start:1;
+        grid-row-end: 2;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .second-p{
+        grid-row-start:2;
+        grid-row-end: 3;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .first-hr{
+        grid-row-start:3;
+        grid-row-end: 4;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .first-quote{
+        font-size:1.7rem;
+        margin:1px 0;
+        grid-row-start:4;
+        grid-row-end: 5; 
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .second-hr{
+        grid-row-start:5;
+        grid-row-end: 6;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .third-p{
+        grid-row-start:6;
+        grid-row-end: 7;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .fourth-p{
+        grid-row-start:7;
+        grid-row-end: 8;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+
+
+
+    .history{
+        grid-template: repeat(7, auto) / auto;
+    }
+    .history h3{
+        font-size:clamp(15px, 4vw, 25px);
+    }
+    .history p{
+        font-size:clamp(15px, 3.5vw, 25px);
+    }
+    .paragraphs-history{
+        margin-top:20px;
+        justify-content: center;
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .civil-war{
+        height:300px;
+        grid-row-start: 2;
+        grid-row-end:3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .treatyrome{
+        width:100%;
+        grid-row-start: 3;
+        grid-row-end:4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .third-hr{
+        grid-row-start:4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .second-quote{
+        font-size:1.7rem;
+        margin:1px 0;
+        width:80%;
+        grid-row-start: 5;
+        grid-row-end:6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .fourth-hr{
+        grid-row-start:6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .map{
+        grid-row-start: 7;
+        grid-row-end:8;
+        grid-column-start: 1;
+        grid-column-end: 2; 
+    }
+}
+
+
+
+/*tablets and small desktops*/
+@media all and (min-width:769px) and (max-width:1199px){
+    body{
+        overflow-x:hidden;
+    }
+    main{
+        max-width:85%;
+    }
+
+
+    .title{
+        font-size:clamp(2rem, 4.5vw, 5rem);     
+    }
+    h2{
+        font-size:clamp(0.9rem, 1.1vw, 1.5rem);
+    }
+    .big-image{
+        height:40vh;
+    }
+    .by{
+        font-size:clamp(0.8rem, 0.9vw, 1.5rem);
+    }
+    .date{
+        font-size:clamp(0.8rem, 0.9vw, 1.5rem);
+        margin-top:-10px;
+    }
+    .icons{
+        margin-top: -20px;
+        margin-right:-55px;
+    }
+    .icons img{
+        width:clamp(1.2rem, 15%, 3rem);
+    }
+
+
+
+    .about{
+        grid-template:repeat(7,auto) / auto;
+    }
+    .about p{
+        font-size:clamp(15px, 2vw, 25px);
+    }
+    .first-p{
+        grid-row-start:1;
+        grid-row-end: 2;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .second-p{
+        grid-row-start:2;
+        grid-row-end: 3;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .first-hr{
+        grid-row-start:3;
+        grid-row-end: 4;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .first-quote{
+        font-size:clamp(1em, 3vw, 5em);
+        margin:15px 0;
+        grid-row-start:4;
+        grid-row-end: 5; 
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .second-hr{
+        grid-row-start:5;
+        grid-row-end: 6;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .third-p{
+        grid-row-start:6;
+        grid-row-end: 7;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+    .fourth-p{
+        grid-row-start:7;
+        grid-row-end: 8;
+        grid-column-start:1;
+        grid-column-end: 2;
+    }
+
+
+
+    .history{
+        margin-top:20px;
+        grid-template: repeat(7, auto) / auto;
+    }
+    .history p{
+        font-size:clamp(15px, 2vw, 25px);
+    }
+    .paragraphs-history{
+        justify-content: center;
+        grid-row-start:1;
+        grid-row-end:2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .civil-war{
+        height:300px;
+        grid-row-start: 2;
+        grid-row-end:3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .treatyrome{
+        width:100%;
+        grid-row-start: 3;
+        grid-row-end:4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .third-hr{
+        grid-row-start:4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .second-quote{
+        font-size:clamp(1em, 3vw, 5em);
+        margin:15px 0;
+        grid-row-start: 5;
+        grid-row-end:6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .fourth-hr{
+        grid-row-start:6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .map{
+        grid-row-start: 7;
+        grid-row-end:8;
+        grid-column-start: 1;
+        grid-column-end: 2; 
+    }
 }

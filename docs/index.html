@@ -7,54 +7,58 @@
         <meta name="description" content="A magazine about Italy using grid layout.">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/italy.png">
-        <title>Italy Magazine | Know more about this beautiful country</title>
+        <title>Italy Magazine | Grid Layout</title>
     </head>
     <body>
         <main>
             <img class="big-image" src="images/firenze.jpg" alt="A full landscape view of the italian city Firenze with its beautiful architecture, at sunset">
             <header>
-                <h1 class="title">the boot shaped country</h1>
+                <h1 class="title">the bel paese stivale</h1>
                 <h2 class="sub">The place where marvelous nature and food meet</h2>
-                <h3 class="by">By<a href="https://www.linkedin.com/in/lucas-dota-trombini/"> LucasDT</a><h3>
+                <h3 class="by">By<a href="https://www.linkedin.com/in/lucas-dota-trombini/">Lucasdt</a><h3>
                 <h3 class="date">December 21, 2022</h3>
                 <!--screen readers will ignore these icons due to aria-hidden attribute set to true as they are only decorative-->
                 <div class="icons" aria-hidden="true">
-                    <a href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/facebook.png"></a>                 
-                    <a href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/twitter.png"></a>
-                    <a href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/instagram.png"></a>
-                    <a href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/linkedin.png"></a>
-                    <a href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/youtube.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/facebook.png"></a>                 
+                    <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/twitter.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/instagram.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/linkedin.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/lucas-dota-trombini/"><img src="images/youtube.png"></a>
                 </div>
             </header><!--end of header-->
             <section class="about">
                 <p class="first-p">Italy is the country in the middle of the Mediterranean Region. Its territory includes the Italian Peninsula, northwestern tip of the Balkan Peninsula, southern edge of Alps and range of islands. Italy is washed by the Adriatic, Ionic, Liguria and Tyrrhenian Seas. Territory of the country is mostly mountainous with Alps in inland Italy and Apennines on the Italian Peninsula.<br>Nature in Italy is as diverse as the local dialects. Mountains grace the planes of the north (hello Dolomites!), craggy shorelines dotted with tiny little houses (Amalfi coast anyone) and active vulcanos waiting to be explored (Mount Etna is calling) are there for the picking. Veer away from the overcrowded cities and head out into the spectacular natural beauty the country holds.<br>Mountains occupy a significant part of Italy. The country's north is the zone of the Alpine mountain system with a highly varied relief and amazing natural diversity. The southern slopes of the Alps with the highest point of Western Europe, Mount Mont Blanc (4810 m) form a complex system of ridges and valleys, covered with dense forests alternating and beautiful alpine meadows.</p>
                 <hr class="first-hr">
-                <p class="quote">“You may have the world if I may have Italy”</p>
+                <blockquote class="first-quote">“You may have the world if I may have Italy”</blockquote>
                 <hr class="second-hr">
                 <p class="second-p">Italian cuisine includes deeply rooted traditions common to the whole country, as well as all the regional gastronomies, different from each other, especially between the north, the centre and the south of Italy, which are in continuous exchange. Many dishes that were once regional have proliferated with variations throughout the country. Italian cuisine offers an abundance of taste, and is one of the most popular and copied around the world. The cuisine has influenced several other cuisines around the world, chiefly that of the United States.</p>
                 <p class="third-p">One of the main characteristics of Italian cuisine is its simplicity, with many dishes made up of few ingredients, and therefore Italian cooks often rely on the quality of the ingredients, rather than the complexity of preparation.</p>
                 <p class="fourth-p">The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.<br> Desserts have a long tradition of merging local flavours such as citrus fruits, pistachio and almonds with sweet cheeses like mascarpone and ricotta or exotic tastes as cocoa, vanilla and cinnamon. <br>Gelato, tiramisù and cassata are among the most famous examples of Italian desserts, cakes and patisserie. Italian cuisine relies heavily on traditional products; the country has a large number of traditional specialities protected under EU law. Italy is the world's largest producer of wine, as well as the country with the widest variety of indigenous grapevine varieties in the world. <br>Italian cuisine has developed over the centuries. Although the country known as Italy did not unite until the 19th century, the cuisine can claim traceable roots as far back as the 4th century BC. Food and culture were very important at that time evident from the cookbook (Apicius) which dates to the first century BC.</p>
             </section><!--end of about section-->
             <section class="history">
-                <h3>A Brief History</h3>
-                <p>Of the country</p>
-                <h3>V1 - 1861</h3>
-                <p>Kindgom of Italy was consolidated</p>
-                <h3>V2 - 1915</h3>
-                <p>Joins the First World War</p>
-                <h3>V3 - 1935</h3>
-                <p>Was withdrawn from the League of Nations</p>
-                <h3>V4 - 1940</h3>
-                <p>Joins the World War II</p>
-                <h3>V5 - 1946</h3>
-                <p>Became a republic</p>
-                <h3>V6 - 1975</h3>
-                <p>Italian border applied as we know today</p>
-                <img src="images/CivilwarMilan.jpg" class="civil-war">
-                <img src="images/TreatyofRome.jpg" class="treatyrome">
-                <quote class="quote">“How beautiful is sunset, when the glow of Heaven descends upon a land like thee, Thou Paradise of exiles, Italy!”</quote>
-                <img src="images/map.jpg" class="map">
-            </section>
+                <div class="paragraphs-history"><!--container to better space out and positiong the children-->
+                    <span><h3 class="first-h3">A Brief</h3>
+                    <p>History of the country</p></span><!--wrapped up in a span to get both elements together inside the flexbox-->
+                    <span><h3>V1 - 1861</h3>
+                    <p>The Kingdom of Italy (Italian: Regno d'Italia) was a state that existed from 1861, when Victor Emmanuel II of Sardinia was proclaimed King of Italy.</p></span>
+                    <span><h3>V2 - 1915</h3>
+                    <p>While World War I is raging in Europe, Italy debates its entry into the war. Originally part the Triple Alliance with Germany and Austria-Hungary, Italy secretly negotiates with the Triple Entente trying to fulfil Italy’s irredentist claims.</p></span>
+                    <span><h3>V3 - 1935</h3>
+                    <p>The Second Italo-Ethiopian War, also referred to as the Second Italo-Abyssinian War, was a war of aggression which was fought between Italy and Ethiopia from October 1935 to February 1937.</p></span>
+                    <span><h3>V4 - 1940</h3>
+                    <p>In a meeting with Adolf Hitler at the Brenner Pass, Benito Mussolini undertakes to bring Italy into World War II.</p></span>
+                    <span><h3>V5 - 1946</h3>
+                    <p>Following the civil war and the Liberation of Italy from Axis troops in 1945, a popular referendum on the institutional form of the state was called and resulted in voters choosing the replacement of the monarchy with a republic.</p></span>
+                    <span><h3>V6 - 1955</h3>
+                    <p>Italy joins the United Nations, along with fifteen other states, after years of stalemate due to opposed vetoes between the United States and the Soviet Union.</p></span>
+                </div>
+                <img src="images/CivilwarMilan.jpg" class="civil-war" alt="italians fighting in the civil war">
+                <img src="images/TreatyofRome.jpg" class="treatyrome" alt="italians in the parlament discussing the Treaty of Rome">
+                <hr class="third-hr">
+                <blockquote class="second-quote">“Love and understand the Italians, for the people are more marvelous than the land.”</blockquote>
+                <hr class="fourth-hr">
+                <img src="images/map.jpg" class="map" alt="a satelite image of Italy">
+            </section><!--end of history section-->
         </main>
     </body>
 </html>
